@@ -58,8 +58,4 @@ sysinfo.txt
 # Crashlytics generated file
 crashlytics-build.properties
 
-/UnityProject/Skyflight/UserSettings/EditorUserSettings.asset
-UnityProject/Skyflight/Assets/BlenderFiles/pipeSetExamples.blend.meta
-UnityProject/Skyflight/Assets/BlenderFiles/shipStuff.blend
-UnityProject/Skyflight/Assets/BlenderFiles/shipStuff.blend1
-UnityProject/Skyflight/Assets/BlenderFiles/shipStuff.blend1.meta
+/UserSettings/EditorUserSettings.asset
