@@ -1,0 +1,117 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!1001 &8758260435416675000
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 97160709996085043, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 97160709996085043, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 769623317550484799, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1096222080402979520, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 1769977676239730013, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4730099637953534998, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4870774356892064502, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: near clip plane
+      value: 0.01
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_RootOrder
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalRotation.x
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalRotation.y
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalRotation.z
+      value: -0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893679712, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356893850702, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_Name
+      value: SkyflightOculusLobbyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 5040183537716828547, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 5040183537716828547, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_sharedMaterial
+      value: 
+      objectReference: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 6024349049220179060, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_fontAsset
+      value: 
+      objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 7615066437685121606, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_IsTrigger
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745819015579735965, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_gripTransform
+      value: 
+      objectReference: {fileID: 0}
+    - target: {fileID: 7745819015579735965, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_grabVolumes.Array.data[0]
+      value: 
+      objectReference: {fileID: 6610292155583819096}
+    m_RemovedComponents:
+    - {fileID: 3468775177883621408, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+  m_SourcePrefab: {fileID: 100100000, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+--- !u!135 &6610292155583819096 stripped
+SphereCollider:
+  m_CorrespondingSourceObject: {fileID: 2465701860082819040, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+  m_PrefabInstance: {fileID: 8758260435416675000}
+  m_PrefabAsset: {fileID: 0}
