@@ -4,8 +4,10 @@ using System.Linq;
 
 public class Paintable : MonoBehaviour
 {
-    private int textureSize = 2048;
+    private int textureWidth;
+    private int textureHeight;
     private int penSize = 10;
+    private Texture2D originalTexture;
     private Texture2D texture;
     private Color[] color;
 
@@ -18,7 +20,12 @@ public class Paintable : MonoBehaviour
     {
         // Set whiteboard texture
         Renderer renderer = GetComponent<Renderer>();
-        this.texture = new Texture2D(textureSize, textureSize);
+        this.originalTexture = renderer.material.mainTexture as Texture2D;
+        Debug.Log(textureWidth + "   " + originalTexture)
+        textureWidth = originalTexture.width;
+        textureHeight = originalTexture.height;
+
+        this.texture = new Texture2D(textureWidth, textureHeight);
         renderer.material.mainTexture = (Texture)texture;
     }
 
@@ -26,8 +33,8 @@ public class Paintable : MonoBehaviour
     void Update()
     {
         // Transform textureCoords into "pixel" values
-        int x = (int)(posX * textureSize - (penSize / 2));
-        int y = (int)(posY * textureSize - (penSize / 2));
+        int x = (int)(posX * textureWidth - (penSize / 2));
+        int y = (int)(posY * textureHeight - (penSize / 2));
 
         // Only set the pixels if we were touching last frame
         if (touchingLast)

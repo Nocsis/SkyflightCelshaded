@@ -102,16 +102,30 @@ PrefabInstance:
     - target: {fileID: 7745819015579735965, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
       propertyPath: m_gripTransform
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 4184934833465978812}
     - target: {fileID: 7745819015579735965, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
       propertyPath: m_grabVolumes.Array.data[0]
       value: 
       objectReference: {fileID: 6610292155583819096}
+    - target: {fileID: 7745819015579735967, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_gripTransform
+      value: 
+      objectReference: {fileID: 4184934833465982930}
     m_RemovedComponents:
     - {fileID: 3468775177883621408, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+--- !u!4 &4184934833465978812 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4870774356893736196, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+  m_PrefabInstance: {fileID: 8758260435416675000}
+  m_PrefabAsset: {fileID: 0}
 --- !u!135 &6610292155583819096 stripped
 SphereCollider:
   m_CorrespondingSourceObject: {fileID: 2465701860082819040, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+  m_PrefabInstance: {fileID: 8758260435416675000}
+  m_PrefabAsset: {fileID: 0}
+--- !u!4 &4184934833465982930 stripped
+Transform:
+  m_CorrespondingSourceObject: {fileID: 4870774356893732202, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
   m_PrefabInstance: {fileID: 8758260435416675000}
   m_PrefabAsset: {fileID: 0}
