@@ -7,7 +7,7 @@ Material:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: Wood
+  m_Name: Black Metall 1
   m_Shader: {fileID: 4800000, guid: 7cd5de0b884b14f88ab763ef465e1799, type: 3}
   m_ShaderKeywords: _SEGMENTED_ON
   m_LightmapFlags: 4
@@ -74,7 +74,6 @@ Material:
     - _Mode: 0
     - _OcclusionStrength: 1
     - _Offset: 0
-    - _OtlWidth: 5
     - _Parallax: 0.02
     - _Segmented: 1
     - _ShnIntense: 0
@@ -85,12 +84,11 @@ Material:
     - _SpecularHighlights: 1
     - _SrcBlend: 1
     - _Steps: 3
-    - _StpSmooth: 0.15
+    - _StpSmooth: 0
     - _UVSec: 0
     - _ZWrite: 1
     m_Colors:
-    - _Color: {r: 0.383, g: 0.19742267, b: 0, a: 1}
+    - _Color: {r: 0.16981131, g: 0.15459237, b: 0.15459237, a: 1}
     - _EmissionColor: {r: 0, g: 0, b: 0, a: 1}
-    - _OtlColor: {r: 1, g: 0, b: 0, a: 1}
     - _ShnColor: {r: 1, g: 1, b: 0, a: 1}
   m_BuildTextureStacks: []
