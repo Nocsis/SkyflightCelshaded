@@ -19,6 +19,18 @@ PrefabInstance:
       propertyPath: m_grabVolumes.Array.data[0]
       value: 
       objectReference: {fileID: 2753761307914682554}
+    - target: {fileID: 2945494585959719360, guid: b4bfd6ac03822fb4592785f769d1cef4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2945494586362352932, guid: b4bfd6ac03822fb4592785f769d1cef4, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 2947282852590538888, guid: b4bfd6ac03822fb4592785f769d1cef4, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 2947282852590538888, guid: b4bfd6ac03822fb4592785f769d1cef4, type: 3}
       propertyPath: near clip plane
       value: 0.1
@@ -71,7 +83,8 @@ PrefabInstance:
       propertyPath: m_Name
       value: SkyflightOculusIngamePrefab
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 6583486392919282270, guid: b4bfd6ac03822fb4592785f769d1cef4, type: 3}
   m_SourcePrefab: {fileID: 100100000, guid: b4bfd6ac03822fb4592785f769d1cef4, type: 3}
 --- !u!4 &6858907946059281387 stripped
 Transform:

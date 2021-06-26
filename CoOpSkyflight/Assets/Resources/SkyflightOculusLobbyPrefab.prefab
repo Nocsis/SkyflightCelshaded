@@ -31,6 +31,14 @@ PrefabInstance:
       propertyPath: m_fontAsset
       value: 
       objectReference: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+    - target: {fileID: 4760022288045645000, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4870774356892064502, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_ClearFlags
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 4870774356892064502, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
       propertyPath: near clip plane
       value: 0.01
@@ -82,6 +90,14 @@ PrefabInstance:
     - target: {fileID: 4870774356893850702, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
       propertyPath: m_Name
       value: SkyflightOculusLobbyPrefab
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872563720621353918, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_IsActive
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4872563721023954778, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
+      propertyPath: m_IsActive
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 5040183537716828547, guid: cff520606000df84ca88a8fd5aaaaa30, type: 3}
       propertyPath: m_fontAsset

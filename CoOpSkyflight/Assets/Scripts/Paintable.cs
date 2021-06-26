@@ -1,35 +1,44 @@
 using UnityEngine;
 using System.Linq;
 
-
+[RequireComponent(typeof(MeshRenderer))]
 public class Paintable : MonoBehaviour
 {
+    private int penSize = 10;
+    private Color[] color;
+
+    private Texture2D startTexture;
+    private Texture2D texture;
+    private Texture2D newTexture;
+    private Color32[] col_originalTexture;
+    private Color32[] col_currentTexture;
+
     private int textureWidth;
     private int textureHeight;
-    private int penSize = 10;
-    private Texture2D originalTexture;
-    private Texture2D texture;
-    private Color[] color;
 
     private bool touching, touchingLast;
     private float posX, posY;
     private float lastX, lastY;
 
-    // Use this for initialization
-    void Start()
+    private void Awake()
     {
-        // Set whiteboard texture
-        Renderer renderer = GetComponent<Renderer>();
-        this.originalTexture = renderer.material.mainTexture as Texture2D;
-        Debug.Log(textureWidth + "   " + originalTexture)
-        textureWidth = originalTexture.width;
-        textureHeight = originalTexture.height;
+        texture = GetComponent<MeshRenderer>().material.mainTexture as Texture2D;
+        textureWidth = texture.width;
+        textureHeight = texture.height;
 
-        this.texture = new Texture2D(textureWidth, textureHeight);
-        renderer.material.mainTexture = (Texture)texture;
+        startTexture = texture; //TODO: Prüfen ob startTexture gebraucht wird, oder ob col_originalTexture reicht und newTexture aus texture erstellt werden kann
+        col_originalTexture = texture.GetPixels32();
+
+        newTexture = new Texture2D(textureWidth, textureHeight, TextureFormat.RGBA32, false, true);
+        newTexture.SetPixels32(startTexture.GetPixels32());
+        newTexture.Apply();
+
+        col_currentTexture = new Color32[textureWidth * textureHeight];
+        newTexture.GetPixels32().CopyTo(col_currentTexture, 0);
+
+        GetComponent<MeshRenderer>().material.mainTexture = newTexture;
     }
 
-    // Update is called once per frame
     void Update()
     {
         // Transform textureCoords into "pixel" values
@@ -40,21 +49,21 @@ public class Paintable : MonoBehaviour
         if (touchingLast)
         {
             // Set base touch pixels
-            texture.SetPixels(x, y, penSize, penSize, color);
+            newTexture.SetPixels(x, y, penSize, penSize, color);
 
             // Interpolate pixels from previous touch
             for (float t = 0.01f; t < 1.00f; t += 0.01f)
             {
                 int lerpX = (int)Mathf.Lerp(lastX, (float)x, t);
                 int lerpY = (int)Mathf.Lerp(lastY, (float)y, t);
-                texture.SetPixels(lerpX, lerpY, penSize, penSize, color);
+                newTexture.SetPixels(lerpX, lerpY, penSize, penSize, color);
             }
         }
 
         // If currently touching, apply the texture
         if (touching)
         {
-            texture.Apply();
+            newTexture.Apply();
         }
 
         this.lastX = (float)x;
