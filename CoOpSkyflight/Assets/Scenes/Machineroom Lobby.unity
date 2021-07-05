@@ -252,8 +252,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: b4bdb828e771e3c4cabc21f81001a5bf, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  paintable: {fileID: 0}
-  drawingColor: {r: 0, g: 0, b: 1, a: 1}
+  paintMode: 0
+  painterTip: {fileID: 1435591803}
+  raycastLength: 3
+  spacing: 1
+  color: {r: 0, g: 0, b: 0, a: 0}
+  brush: {fileID: 2800000, guid: 18bfbdd610fd9594db41f455eeeab57a, type: 3}
+  paintable: {fileID: 1131393806}
 --- !u!54 &517062502
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -357,7 +362,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 517062500}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 1.904, y: 1.434, z: -0.618}
+  m_LocalPosition: {x: 1.904, y: 0.975, z: -0.618}
   m_LocalScale: {x: 0.05, y: 0.05, z: 0.2}
   m_Children:
   - {fileID: 1435591803}
@@ -472,6 +477,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e0d71cbd4918ded44ac4cac09ac6b496, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  initialTexture: {fileID: 0}
 --- !u!1 &1223078867
 GameObject:
   m_ObjectHideFlags: 0
@@ -562,7 +568,7 @@ Transform:
   m_GameObject: {fileID: 1223078867}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 1.9026082, y: 0.542, z: -0.669}
-  m_LocalScale: {x: 0.5, y: 1.5, z: 0.5}
+  m_LocalScale: {x: 0.5, y: 0.784575, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 9
@@ -821,7 +827,6 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 1436936298}
-  - component: {fileID: 1436936297}
   m_Layer: 0
   m_Name: PostProcessingVolume
   m_TagString: Untagged
@@ -829,18 +834,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!114 &1436936297
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1436936295}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 172515602e62fb746b5d573b38a5fe58, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!4 &1436936298
 Transform:
   m_ObjectHideFlags: 0

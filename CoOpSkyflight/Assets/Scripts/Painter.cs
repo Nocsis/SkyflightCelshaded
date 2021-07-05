@@ -2,57 +2,91 @@ using UnityEngine;
 
 public class Painter : MonoBehaviour
 {
-    public Paintable paintable;
+    [SerializeField]
+    private PaintMode paintMode;
 
-    [SerializeField] private Color drawingColor = Color.blue;
+    [SerializeField]
+    private Transform painterTip;
 
-    private RaycastHit touch;
-    private Quaternion lastAngle;
-    private bool lastTouch;
+    [SerializeField]
+    private float raycastLength = 0.01f;
 
-    void Update()
+    [SerializeField]
+    private float spacing = 1f;
+
+    [SerializeField]
+    private Color color;
+
+    [SerializeField]
+    private Texture2D brush;
+
+    [SerializeField]
+    private Paintable paintable;
+
+    private Collider paintableCollider;
+
+    private Stamp stamp;
+
+    private Vector2? lastDrawPosition = null;
+
+    private void Awake()
     {
-        float tipHeight = transform.Find("Tip").transform.localScale.y;
-        Vector3 tip = transform.Find("Tip").transform.position;
+        if (paintable != null)
+            Initialize(paintable);
+        else
+            Debug.LogError("[Painter]" + gameObject.name + " needs to have an assigned Paintable");
+    }
 
-        if (lastTouch)
+    public void Initialize(Paintable newPaintable)
+    {
+        stamp = new Stamp(brush);
+        stamp.mode = paintMode;
+
+        paintable = newPaintable;
+        paintableCollider = newPaintable.GetComponent<Collider>();
+    }
+
+    private void Update()
+    {
+        Ray ray = new Ray(painterTip.position, painterTip.forward);
+        RaycastHit hit;
+
+        if (paintableCollider.Raycast(ray, out hit, raycastLength))
         {
-            tipHeight *= 1.1f;
-        }
-
-        // Check for a Raycast from the tip of the pen
-        if (Physics.Raycast(tip, transform.forward, out touch, tipHeight)) //&& check for being held)
-        {
-            if (!touch.collider.TryGetComponent<Paintable>(out _))
-                return;
-            this.paintable = touch.collider.GetComponent<Paintable>();
-
-            // Give haptic feedback when touching the whiteboard
-            //controllerActions.TriggerHapticPulse(0.05f);
-
-            // Set whiteboard parameters
-            paintable.SetColor(drawingColor);
-            paintable.SetTouchPosition(touch.textureCoord.x, touch.textureCoord.y);
-            paintable.ToggleTouch(true);
-
-            // If we started touching, get the current angle of the pen
-            if (lastTouch == false)
+            //Debug.Log("Hit!");
+            if (lastDrawPosition.HasValue && lastDrawPosition.Value != hit.textureCoord)
             {
-                lastTouch = true;
-                lastAngle = transform.rotation;
+                Debug.Log("Drawline");
+                paintable.DrawLine(stamp, lastDrawPosition.Value, hit.textureCoord, color, spacing);
             }
+            else
+            {
+                //Debug.Log("Splash");
+                paintable.CreateSplash(hit.textureCoord, stamp, color);
+            }
+
+            lastDrawPosition = hit.textureCoord;
         }
         else
         {
-            if(paintable != null)
-                paintable.ToggleTouch(false);
-            lastTouch = false;
+            lastDrawPosition = null;
         }
+    }
 
-        // Lock the rotation of the pen if "touching"
-        if (lastTouch)
-        {
-            transform.rotation = lastAngle;
-        }
+    public void ChangeColor(Color newColor)
+    {
+        color = newColor;
+    }
+
+    public void ChangePaintMode(PaintMode newPaintMode)
+    {
+        paintMode = newPaintMode;
+        stamp.mode = paintMode;
+    }
+
+    public void ChangeStamp(Texture2D newBrush)
+    {
+        stamp = new Stamp(newBrush);
+        stamp.mode = paintMode;
     }
 }
