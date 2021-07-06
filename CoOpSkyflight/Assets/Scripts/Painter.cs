@@ -62,6 +62,7 @@ public class Painter : MonoBehaviour
             else
             {
                 //Debug.Log("Splash");
+                Debug.Log("hit.texturecoord: " + hit.textureCoord);
                 paintable.CreateSplash(hit.textureCoord, stamp, color);
             }
 
